@@ -37,13 +37,13 @@ class CreateAcc(QDialog):
 class CreateAccs(QDialog):
     def __init__(self):
         super(CreateAccs,self).__init__()
-        loadUi("page1",self)
+        loadUi("page3.ui",self)
+        self.pushButton_4.clicked.connect(self.gotocreate)
 
-
-
-
-
-
+    def gotocreate(self):
+            createaccs = CreateAccs()
+            widget.addWidget(createaccs)
+            widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
 
